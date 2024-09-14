@@ -5,8 +5,8 @@ import lombok.Getter;
 
 @Getter
 public abstract class ParkingSpace {
-    private String spaceId;
-    private ParkingSpaceType pType;
+    private final String spaceId;
+    private final ParkingSpaceType pType;
     private Vehicle vehicle;
     boolean isEmpty;
 

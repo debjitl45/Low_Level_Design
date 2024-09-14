@@ -38,12 +38,11 @@ public class Floor {
         return false;
     }
     private ParkingSpaceType getSpaceTypeForVehicle(VehicleType vType){
-        switch (vType){
-            case CAR : return ParkingSpaceType.CAR_PARKING;
-            case BIKE: return ParkingSpaceType.BIKE_PARKING;
-            case TRUCK: return ParkingSpaceType.TRUCK_PARKING;
-        }
-        return null;
+        return switch (vType) {
+            case CAR -> ParkingSpaceType.CAR_PARKING;
+            case BIKE -> ParkingSpaceType.BIKE_PARKING;
+            case TRUCK -> ParkingSpaceType.TRUCK_PARKING;
+        };
     }
     public ParkingSpace getSpace(Vehicle v)
     {
